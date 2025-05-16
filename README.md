@@ -116,8 +116,8 @@ curl -X DELETE "http://127.0.0.1:8000/stop-tracking/" -H "Content-Type: applicat
 Corre la suite de tests con:
 
 ```bash
-uv run pytest .\src\tests\tests_api_.py # Windows
-uv run pytest ./src/tests/tests_api_.py # Linux/Mac
+uv run pytest .\src\tests\tests_api.py # Windows
+uv run pytest ./src/tests/tests_api.py # Linux/Mac
 ```
 
 Los tests cubren múltiples escenarios: creación, actualización, eliminación, validaciones, búsquedas y operaciones concurrentes.
