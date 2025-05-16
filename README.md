@@ -30,13 +30,13 @@ Este proyecto presenta un backend simple para gestionar conductores y sus posici
 
 ## Cómo funciona
 
-Para mantener consistente la operación de la API, los tres endpoints reciben y devuelven datos en formato JSON.
+Para mantener consistente la operación de la API, los tres endpoints devuelven datos en formato JSON.
 
 - **Actualizar posición (`PUT /update-position/`)**  
   Envía un JSON con `driver_id` y `position` (coordenadas [lat, lon]). Si el conductor existe, actualiza su posición; si no, lo crea.
 
 - **Detener tracking (`DELETE /stop-tracking/`)**  
-  Envía un JSON con `driver_id`. Elimina al conductor de la base de datos y su historial de posiciones.
+  Envía en el parámetro el `driver_id`. Elimina al conductor de la base de datos y su historial de posiciones.
 
 - **Conductor más cercano (`POST /get-closest-driver/`)**  
   Envía la posición `[lat, lon]` en el body JSON. El sistema devuelve el conductor más cercano basado en distancia Euclidiana.
